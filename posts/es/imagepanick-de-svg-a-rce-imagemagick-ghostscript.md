@@ -2,12 +2,12 @@
 id: "imagepanick-svg-rce-imagemagick-ghostscript"
 title: "ImagePanick: De SVG a RCE encadenando políticas débiles y bugs en ImageMagick y Ghostscript"
 author: "eric-labrador"
-publishedDate: 2026-03-19
-updatedDate: 2026-03-19
+publishedDate: 2026-04-20
+updatedDate: 2026-04-20
 image: ""
 description: "Cómo un solo archivo SVG consigue escritura arbitraria de archivos (y RCE) encadenando políticas por defecto débiles en ImageMagick con vulnerabilidades en Ghostscript 10.06.0, saltándose completamente el modo SAFER de GS."
 categories:
-  - "vulnerability-research"
+  - "web"
 draft: false
 featured: false
 lang: "es"
@@ -186,7 +186,7 @@ Dos políticas débiles por defecto. Tres vulnerabilidades en Ghostscript. Un ar
 
 El _exploit_ completo cabe en un solo archivo SVG autocontenido. He publicado la PoC completa junto con un laboratorio Docker listo para usar, para que puedas reproducir el problema de forma segura en un entorno aislado:
 
-**[https://github.com/e1abrador/ImagePanick/](https://github.com/e1abrador/ImagePanick/?utm_source=deephacking.tech)**
+- **[ImagePanick PoC](https://github.com/e1abrador/ImagePanick/)**
 
 El repositorio incluye el script generador del SVG, instrucciones paso a paso, y un entorno Dockerizado con las versiones vulnerables de ImageMagick y Ghostscript preinstaladas. Solo `docker build`, `docker run`, y verás la escritura arbitraria de archivos en tiempo real.
 

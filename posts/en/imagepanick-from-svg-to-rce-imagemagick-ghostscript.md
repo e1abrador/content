@@ -2,12 +2,12 @@
 id: "imagepanick-svg-rce-imagemagick-ghostscript"
 title: "ImagePanick: From SVG to RCE Chaining Weak Policies and Bugs in ImageMagick and Ghostscript"
 author: "eric-labrador"
-publishedDate: 2026-03-19
-updatedDate: 2026-03-19
+publishedDate: 2026-04-20
+updatedDate: 2026-04-20
 image: ""
 description: "How a single SVG file can achieve arbitrary file write (and RCE) by chaining weak default policies in ImageMagick with vulnerabilities in Ghostscript 10.06.0, completely bypassing GS SAFER mode."
 categories:
-  - "vulnerability-research"
+  - "web"
 draft: false
 featured: false
 lang: "en"
@@ -186,7 +186,7 @@ Two weak default policies. Three Ghostscript vulnerabilities. One SVG file. Zero
 
 The entire exploit fits in a single self-contained SVG file. I've published the full PoC along with a ready-to-use Docker lab so you can safely reproduce the issue in an isolated environment:
 
-**[https://github.com/e1abrador/ImagePanick/](https://github.com/e1abrador/ImagePanick/?utm_source=deephacking.tech)**
+- **[ImagePanick PoC](https://github.com/e1abrador/ImagePanick/)**
 
 The repo includes the SVG generator script, step-by-step instructions, and a Dockerized environment with the vulnerable versions of ImageMagick and Ghostscript pre-installed. Just `docker build`, `docker run`, and see the arbitrary file write happen in real time.
 
